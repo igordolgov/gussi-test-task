@@ -6,209 +6,208 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gussi</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <main class="main">
+    <main class="page">
         <div class="product">
-            <!--ЛЕВАЯ ЧАСТЬ (СЛАЙДЕР) -->
-            <section class="swiper product__swiper">
-                <div class="swiper__logo"><img src="images/logo.svg" alt="Logo Gussi"></div>
+            <!-- ЛЕВАЯ ЧАСТЬ -->
+            <div class="slider product__slider">
+                <div class="slider__wrap">
+                    <div class="slider__logo"><img src="images/logo.svg" alt="Gussi logo"></div>
 
-                <!-- Дополнительная обертка для слайдера -->
-                <div class="swiper-wrapper slide__bg">
-                    <!-- Слайды -->
-                    <div class="swiper-slide">
-                        <img src="images/slide-1.jpg" alt="Light coat">
+                    <div class="slick-slider" id="productSlider">
+                        <div class="slider__item slide">
+                            <div class="slide__bg" style="background-image: url(images/slide-1.jpg);">
+                            </div>
 
-                        <div class="slide__content">
-                            <div class="slide__title">Light coat</div>
+                            <div class="slide__content">
+                                <div class="slide__title">Light coat</div>
 
-                            <div class="slide__descr">More cotton, more freedom</div>
+                                <div class="slide__descr">More cotton, more freedom</div>
+                            </div>
+                        </div>
+
+                        <div class="slider__item slide">
+                            <div class="slide__bg" style="background-image: url(images/slide-2.jpg);"></div>
+
+                            <div class="slide__content">
+                                <div class="slide__title">Sandy longsleeve</div>
+
+                                <div class="slide__descr">More cotton, more freedom</div>
+                            </div>
+                        </div>
+
+                        <div class="slider__item slide">
+                            <div class="slide__bg" style="background-image: url(images/slide-3.jpg);"></div>
+
+                            <div class="slide__content">
+                                <div class="slide__title">Lime jacket</div>
+
+                                <div class="slide__descr">More cotton, more freedom</div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
-                        <img src="images/slide-2.jpg" alt="Sandy longsleeve">
+                    <div class="slider__bottom">
+                        <div class="slider__nav nav" id="productSliderNav"></div>
 
-                        <div class="slide__content">
-                            <div class="slide__title">Sandy longsleeve</div>
+                        <div class="slider__counter counter">
+                            <div class="counter__item large-font" id="currentSlide">01</div>
 
-                            <div class="slide__descr">More cotton, more freedom</div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="images/slide-3.jpg" alt="Lime jacket">
-
-                        <div class="slide__content">
-                            <div class="slide__title">Lime jacket</div>
-
-                            <div class="slide__descr">More cotton, more freedom</div>
+                            <div class="counter__item large-font" id="slidesCounter">03</div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Пагинация (цифры) -->
-                <div class="swiper__bottom">
-                    <div class="swiper-pagination"></div>
-
-                    <!-- Кнопки навигации -->
-                    <div class="swiper-button-prev"></div>
-
-                    <div class="swiper-button-next"></div>
-                </div>
-            </section>
-
-            <!--ПРАВАЯ ЧАСТЬ (КОНТЕНТ) -->
-            <section class="content">
-                <div class="wrapper">
-                    <article class="subtitle font-bold color-grey">New collection</article>
+            <!-- ПРАВАЯ ЧАСТЬ -->
+            <section class="page__content">
+                <div class="wrap">
+                    <div class="subtitle bold grey-color">New collection</div>
 
                     <h1 class="title">Gussi light coat</h1>
 
-                    <div class="description color-grey big">It&nbsp;takes you from the party to&nbsp;the after party with its fashion-forward styles. A&nbsp;playfull blend of retro and modern outdoor design.</div>
+                    <div class="description grey-color large-font">It&nbsp;takes you from the party to&nbsp;the after party with its fashion-forward styles. A&nbsp;playfull blendof retro and modern outdoor design.</div>
 
                     <div class="form-container">
                         <form class="form">
                             <div class="form__border">
                                 <div class="form__row">
-                                    <article class="input-label-wrap">
-                                        <div class="subtitle font-bold color-grey">colour</div>
+                                    <div class="input-label-wrap">
+                                        <div class="subtitle bold grey-color">
+                                            colour
+                                        </div>
 
-                                        <label class="input-label input-label--radio  input-label--inline-block">
-                                        <input type="radio" checked class="radio" name="colour" value="1">
+                                        <label class="input-label input-label--radio input-label--inline-block">
+											<input type="radio" checked class="radio" name="colour" value="1">
 
-                                        <span class="radio-custom  radio-custom--big  radio-custom--violet"></span>
-                                    </label>
+											<span class="radio-custom radio-custom--big radio-custom--violet"></span>
+										</label>
 
-                                        <label class="input-label input-label--radio  input-label--inline-block">
-                                        <input type="radio" class="radio" name="colour" value="2">
+                                        <label class="input-label input-label--radio input-label--inline-block">
+											<input type="radio" class="radio" name="colour" value="2">
 
-                                        <span class="radio-custom  radio-custom--big  radio-custom--light-gray"></span>
-                                    </label>
+											<span class="radio-custom radio-custom--big radio-custom--light-gray"></span>
+										</label>
 
-                                        <label class="input-label input-label--radio  input-label--inline-block">
-                                        <input type="radio" class="radio" name="colour" value="3">
+                                        <label class="input-label input-label--radio input-label--inline-block">
+											<input type="radio" class="radio" name="colour" value="3">
 
-                                        <span class="radio-custom radio-custom--big  radio-custom--bluesh-gray"></span>
-                                    </label>
-                                    </article>
+											<span class="radio-custom radio-custom--big radio-custom--bluesh-gray"></span>
+										</label>
+                                    </div>
 
-                                    <article class="input-label-wrap">
-                                        <div class="subtitle font-bold color-grey">size</div>
+                                    <div class="input-label-wrap">
+                                        <div class="subtitle bold grey-color">size</div>
 
-                                        <label class="input-label input-label--radio  input-label--inline-block">
-                                        <input type="radio" checked class="radio" name="size" value="xs">
+                                        <label class="input-label input-label--radio input-label--inline-block">
+											<input type="radio" checked class="radio" name="size" value="xs">
 
-                                        <span class="radio-custom radio-custom--big  radio-custom--text">XS</span>
-                                    </label>
+											<span class="radio-custom radio-custom--big radio-custom--text">XS</span>
+										</label>
 
-                                        <label class="input-label input-label--radio  input-label--inline-block">
-                                        <input type="radio" class="radio" name="size" value="s">
+                                        <label class="input-label input-label--radio input-label--inline-block">
+											<input type="radio" class="radio" name="size" value="s">
 
-                                        <span class="radio-custom  radio-custom--big  radio-custom--text">S</span>
-                                    </label>
+                                            <span class="radio-custom radio-custom--big radio-custom--text">S</span>
+										</label>
 
-                                        <label class="input-label input-label--radio  input-label--inline-block">
-                                        <input type="radio" class="radio" name="size" value="m">
+                                        <label class="input-label input-label--radio input-label--inline-block">
+											<input type="radio" class="radio" name="size" value="m">
 
-                                        <span class="radio-custom radio-custom--big  radio-custom--text">M</span>
-                                    </label>
+                                            <span class="radio-custom radio-custom--big radio-custom--text">M</span>
+										</label>
 
-                                        <label class="input-label input-label--radio  input-label--inline-block">
-                                        <input type="radio" class="radio" name="size" value="l">
+                                        <label class="input-label input-label--radio input-label--inline-block">
+											<input type="radio" class="radio" name="size" value="l">
 
-                                        <span class="radio-custom radio-custom--big radio-custom--text">L</span>
-                                    </label>
-
-                                        <label class="input-label input-label--radio  input-label--inline-block">
-                                        <input type="radio" disabled class="radio" name="size" value="xl">
-
-                                        <span class="radio-custom radio-custom--big  radio-custom--text">XL</span>
-                                    </label>
+											<span class="radio-custom radio-custom--big radio-custom--text">L</span>
+										</label>
 
                                         <a href="#" class="btn btn--sandy">Size guide</a>
-                                    </article>
+                                    </div>
                                 </div>
 
                                 <div class="form__row form__row--half">
-                                    <article class="input-label-wrap">
-                                        <div class="subtitle font-bold color-grey">Quantity</div>
+                                    <div class="input-label-wrap">
+                                        <div class="subtitle bold grey-color">Quantity</div>
 
                                         <input type="text" style="display:none;" name="Quantity" value="1">
 
                                         <div class="js-counter counter">
-                                            <div class="counter__btn btn btn--circle disabled js-counter-minus"><span class="icon icon--minus"></span></div>
+                                            <div class="counter__btn btn btn--circle disabled js-counter-minus">
+                                                <span class="icon icon--minus"></span>
+                                            </div>
 
-                                            <div class="counter__text js-counter-text color-grey">1</div>
+                                            <div class="counter__text js-counter-text grey-color">1</div>
 
-                                            <div class="counter__btn btn btn--circle js-counter-plus"><span class="icon icon--plus"></span></div>
+                                            <div class="counter__btn btn btn--circle js-counter-plus">
+                                                <span class="icon icon--plus"></span>
+                                            </div>
                                         </div>
-                                    </article>
+                                    </div>
 
-                                    <article class="input-label-wrap">
-                                        <div class="subtitle font-bold color-grey">cost</div>
+                                    <div class="input-label-wrap">
+                                        <div class="subtitle bold grey-color">cost</div>
 
-                                        <div class="cost color-grey"><span class="color-sandy">$120</span>.00</div>
-                                    </article>
+                                        <div class="cost grey-color">
+                                            <span class="sandy-color">$120</span>.00
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <article class="main__info">
-                                <div class="subtitle font-bold color-grey">main details</div>
-
+                            <div class="product__info">
+                                <div class="subtitle bold grey-color">PRODUCT DETAILS</div>
                                 <div class="text">Look out for its standout party dresses, feminine details, statement jackets and cool denim including skinny-cut jeans and cute denim shorts, which sit alongside its directional footwear and swimwear ranges.</div>
-
-                                <div class="color-grey">63% Viscose, 37% Polyamide.</div>
-                            </article>
+                                <div class="grey-color">63% Viscose, 37% Polyamide.</div>
+                            </div>
 
                             <button class="button" type="submit">Order now</button>
                         </form>
                     </div>
 
-                    <!-- АККОРДЕОН (РАСКРЫВАЮЩИЕСЯ СПИСКИ) -->
                     <div class="accordion-container">
-                        <article class="accordion">
-                            <h1 class="accordion__header larger js-accordion-header">
+                        <div class="accordion">
+                            <div class="accordion__header large-font js-accordion-header">
                                 Delivery
                                 <div class="accordion__icon">
                                     <div class="icon icon--plus"></div>
                                 </div>
-                            </h1>
+                            </div>
 
                             <div class="accordion__body js-accordion-body">
-                                <div class="color-grey">
+                                <div class="grey-color">
                                     Delivered on or before Monday, 25 February 2019 Note: Subject to placing your order before specific cut-off times. Details available in checkout.<br><br>For free delivery – spend over <b>£18.08</b>
                                 </div>
                             </div>
-                        </article>
+                        </div>
 
-                        <article class="accordion">
-                            <h1 class="accordion__header big js-accordion-header">
+                        <div class="accordion">
+                            <div class="accordion__header large-font js-accordion-header">
                                 Return
                                 <div class="accordion__icon">
                                     <div class="icon icon--plus"></div>
                                 </div>
-                            </h1>
+                            </div>
 
                             <div class="accordion__body js-accordion-body">
-                                <div class="color-grey">
+                                <div class="grey-color">
                                     Return through your local Boxberry store available in over 2,300 locations.<br> You can create your return on the carrier website by clicking the create return link.<br> Open 7 days a week, early until late.
                                 </div>
                             </div>
-                        </article>
+                        </div>
                     </div>
 
-                    <div class="subtitle font-bold color-grey">Similar Collections</div>
+                    <div class="subtitle bold grey-color">Similar Collections</div>
 
-                    <div class="flex-container  flex-container--half">
+                    <div class="flex-container flex-container--half">
                         <div class="flex-container__item">
                             <a href="#" class="card">
-                                <div class="card__bg js-set-bg-image" style="background-image: url(images/card-1.jpg);" data-mobile="images/card-1.jpg" data-desktop="images/card-1.jpg" data-tablet="images/card-1_tablet.jpg"></div>
+                                <div class="card__bg" style="background-image: url(images/card-1.jpg)"></div>
 
                                 <div class="card__title">Kingsman style</div>
 
@@ -218,7 +217,7 @@
 
                         <div class="flex-container__item">
                             <a href="#" class="card">
-                                <div class="card__bg js-set-bg-image" style="background-image: url(images/card-2.jpg);" data-mobile="images/card-2.jpg" data-desktop="images/card-2.jpg" data-tablet="images/card-2_tablet.jpg"></div>
+                                <div class="card__bg" style="background-image: url(images/card-2.jpg)"></div>
 
                                 <div class="card__title">Denim goddess</div>
 
@@ -228,51 +227,49 @@
                     </div>
 
                     <div class="subscribe">
-                        <h2>Subscribe our newsletter</h2>
+                        <div class="h2">Subscribe our newsletter</div>
 
-                        <div class="big color-grey">Get notified about new collections of Gussi Store</div>
+                        <div class="large-font grey-color">Get notified about new collections of Gussi Store</div>
 
                         <form class="form">
                             <div class="input-label-wrap">
                                 <label class="input-label">
-                                <input type="text" class="input-label__input" name="name" placeholder="Enter your name">
-                            </label>
+									<input type="text" class="input-label__input" name="name" placeholder="Enter your name">
+								</label>
                             </div>
 
                             <div class="input-label-wrap">
                                 <label class="input-label">
-                                <input type="email" class="input-label__input" name="email" placeholder="Enter your e-mail">
-                            </label>
+									<input type="email" class="input-label__input" name="email" placeholder="Enter your e-mail">
+								</label>
                             </div>
 
                             <div class="input-label-wrap input-label-wrap--flex">
-                                <div class="big color-grey">Choose your gender:</div>
+                                <div class="large-font grey-color">Choose your gender:</div>
+                                <label class="input-label input-label--radio">
+									<input type="radio" checked class="radio" name="gender" value="m">
+									<span class="radio-custom radio-custom--violet"></span>
+
+									<span class="radio-text">Male</span>
+								</label>
 
                                 <label class="input-label input-label--radio">
-                                <input type="radio" checked class="radio" name="gender" value="m">
+									<input type="radio" class="radio" name="gender" value="f">
 
-                                <span class="radio-custom radio-custom--violet"></span>
+									<span class="radio-custom radio-custom--violet"></span>
 
-                                <span class="radio-text">Male</span>
-                            </label>
-
-                                <label class="input-label input-label--radio">
-                                <input type="radio" class="radio" name="gender" value="f">
-
-                                <span class="radio-custom radio-custom--violet"></span>
-
-                                <span class="radio-text">Female</span>
-                            </label>
+									<span class="radio-text">Female</span>
+								</label>
                             </div>
 
                             <div class="input-label-wrap">
-                                <label class="input-label input-label--checkbox ">
-                                <input type="checkbox" name="agreed" class="checkbox">
+                                <label class="input-label input-label--checkbox">
+				                    <input type="checkbox" name="agreed" class="checkbox">
 
-                                <span class="checkbox-custom checkbox-custom--mark"><svg class="mark" width="20" height="20" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.795L8.84735 0L3.53583 7.08L0.856698 5.085L0 6.15L3.86293 9L10 0.795Z" fill="white"/></svg></span>
+				                    <span class="checkbox-custom checkbox-custom--mark"><svg class="mark" width="20" height="20" viewbox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0.795L8.84735 0L3.53583 7.08L0.856698 5.085L0 6.15L3.86293 9L10 0.795Z" fill="white"/></svg></span>
 
-                                <span>Look out for its standout party dresses, feminine details</span>
-                            </label>
+				                    <span>Look out for its standout party dresses, feminine details</span>
+				                </label>
                             </div>
 
                             <button class="button" type="submit">Subscribe Gussi</button>
@@ -283,9 +280,8 @@
         </div>
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
